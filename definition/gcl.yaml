@@ -1,0 +1,17 @@
+---
+apiVersion: gateway.mulesoft.com/v1alpha1
+kind: Extension
+metadata:
+  labels:
+    title: custom-header-validation
+    category: Custom
+spec:
+  extends:
+    - name: extension-definition
+      namespace: default
+  properties:
+    headerKey:
+      type: string
+      default: some value
+  required:
+    - headerKey
